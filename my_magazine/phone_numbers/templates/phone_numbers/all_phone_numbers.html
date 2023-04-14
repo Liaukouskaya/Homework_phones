@@ -1,0 +1,12 @@
+{% extends 'phone_numbers/base.html' %}
+
+{% block content %}
+  <h2>Все номера телефонов:</h2>
+<ul>
+{% for phone_number in phone_numbers %}
+    <li>{{ phone_number.phone_number }}-{{phone_number.name}}</li>
+{% empty %}
+    <li>No phone numbers found.</li>
+{% endfor %}
+</ul>
+{% endblock %}
